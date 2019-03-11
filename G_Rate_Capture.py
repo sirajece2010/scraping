@@ -68,8 +68,8 @@ while True:
         content = get_content('http://www.livechennai.com/gold_silverrate.asp','get')
         #content = read_content('output_2019-02-12.html')
         fh = open('output_{}.html'.format(today), 'w')
-        #fh.write(content.encode('utf-8'))
-        fh.write(content)
+        fh.write(str(content.encode('utf-8')))
+        #fh.write(content)
         fh.close()
 
         soup = BeautifulSoup(content, 'html.parser')
